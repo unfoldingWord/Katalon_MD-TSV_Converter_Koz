@@ -1,0 +1,31 @@
+{
+  "keywordFileContentHash": "52BD6EB13B14FC7118164F7FD7C679BA",
+  "keywordClasses": [
+    {
+      "name": "unfoldingWord_Keywords.GetTestingConfig",
+      "keywordMethods": [
+        {
+          "name": "getOperatingSystem",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "getBrowserAndVersion",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "getScreenResolution",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "getTestCaseName",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

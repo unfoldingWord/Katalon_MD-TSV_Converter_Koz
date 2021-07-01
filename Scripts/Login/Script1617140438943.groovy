@@ -18,10 +18,20 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://tn-converter-app.netlify.app/')
+WebUI.maximizeWindow()
 
-WebUI.setText(findTestObject('Object Repository/input_Username_username'), 'tc01')
+if (binding.hasVariable('url')) {
+	myUrl = url
+} else {
+	myUrl = GlobalVariable.url
+}
 
-WebUI.setEncryptedText(findTestObject('Object Repository/input_Password_password'), '+0+nfRaS+QU=')
+
+WebUI.navigateToUrl(myUrl)
+
+WebUI.setText(findTestObject('input_Username'), 'tc01')
+
+WebUI.setEncryptedText(findTestObject('input_Password'), '+0+nfRaS+QU=')
 
 WebUI.click(findTestObject('button_Login'))
+

@@ -1,0 +1,30 @@
+{
+  "keywordFileContentHash": "F548C9B3F326B9A5232955041E9D065C",
+  "keywordClasses": [
+    {
+      "name": "unfoldingWord_Keywords.ManageTNColumns",
+      "keywordMethods": [
+        {
+          "name": "toggleColumn",
+          "parameters": [
+            {
+              "name": "columns",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Object",
+                "unresolvedClassName": "java.lang.Object",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

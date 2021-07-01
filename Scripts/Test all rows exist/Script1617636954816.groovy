@@ -22,14 +22,18 @@ import com.kms.katalon.core.webui.driver.DriverFactory
 
 import internal.GlobalVariable
 
-allBooks = '/Users/' + GlobalVariable.pcUser + '/Documents/Sikuli/Files/Bible_Books.csv'
-ntBooks = '/Users/' + GlobalVariable.pcUser + '/Documents/Sikuli/Files/NT_Books.csv'
-otBooks = '/Users/' + GlobalVariable.pcUser + '/Documents/Sikuli/Files/OT_Books.csv'
-someBooks = '/Users/' + GlobalVariable.pcUser + '/Documents/Sikuli/Files/Some_Books.csv'
-oneBook = '/Users/' + GlobalVariable.pcUser + '/Documents/Sikuli/Files/One_Book.csv'
-epistleBooks = '/Users/cckozie/Documents/Sikuli/Files/Epistle_Books.csv'
+// TEST TO VERIFY THAT ALL "ROWS" IN THE MD FILE ARE REPRESENTED IN THE TARGET ON THE SCREEN
 
-myBooks = someBooks
+filesPath = '/Users/' + GlobalVariable.pcUser + '/Katalon Studio/Files/Reference/'
+
+allBooks = filesPath + 'Bible_Books.csv'
+ntBooks = filesPath + 'NT_Books.csv'
+otBooks = filesPath + 'OT_Books.csv'
+someBooks = filesPath + 'Some_Books.csv'
+oneBook = filesPath + 'One_Book.csv'
+epistleBooks = filesPath + 'Epistle_Books.csv'
+
+myBooks = oneBook
 
 testFiles = []
 
@@ -58,15 +62,6 @@ bookFilesPath = "/html/body/div[1]/div[2]/div[2]/table/tbody"
 fileTQsPath= "/html/body/div[1]/div[2]/div[2]/div[5]/div/div"
 
 //======================================================================================================
-//mdType = 'tn'
-
-//repoOwner = 'tc01'
-
-//repo_en = repoOwner + '/en_' + mdType
-
-//repo_es = repoOwner + '/es-419_' + mdType
-
-//repo = repo_en
 
 repoOwner = 'manny_colon'
 
@@ -82,14 +77,13 @@ Date now = new Date()
 
 String fName = 'md2tsv_' + mdType + '-' + now.format('MMddyyhhmmss') + '.txt'
 
-File oFile = new File('/Users/' + GlobalVariable.pcUser + '/Katalon Studio/Files/' + fName)
+File oFile = new File('/Users/' + GlobalVariable.pcUser + '/Katalon Studio/Files/Logs/' + fName)
+
 msg = 'Testing ' + repo
-GlobalVariable.output.add(msg)
+GlobalVariable.tcMessages.add(msg)
 oFile.append(msg + '\n')
 
 //======================================================================================================
-
-type = 'rows'
 
 bookErrors = false
 
@@ -100,7 +94,7 @@ for (book in testFiles) {
 	
 	msg = '\n Processing ' + book
 	println(msg)
-	GlobalVariable.output.add(msg)
+	GlobalVariable.tcMessages.add(msg)
 	oFile.append(msg + '\n')
 	
 	WebUI.callTestCase(findTestCase('Select Project'), [('owner') : repoOwner, ('repo') : repo, ('book') : book])
@@ -111,7 +105,7 @@ for (book in testFiles) {
 	
 	referenceType = WebUI.getText(findTestObject('Object Repository/label_Book_or_Reference'))
 	
-	tRowText = getTableValues(targetPath, type)
+	tRowText = getTableValues(targetPath, 'rows')
 	
 	tRowText2 = []
 	
@@ -139,7 +133,7 @@ for (book in testFiles) {
 	
 	text = getTableValues(bookFilesPath,'files')
 	
-	println(text)
+//	println(text)
 	
 	filePage = WebUI.verifyTextPresent('.md', false, FailureHandling.OPTIONAL)
 	
@@ -151,7 +145,7 @@ for (book in testFiles) {
 		chapters.add('01')
 	}
 
-	println(chapters)
+//	println(chapters)
 	
 //	for (chapter in chapters) {
 		chapters.each { chapter -> 
@@ -161,7 +155,7 @@ for (book in testFiles) {
 			
 			text = getTableValues(bookFilesPath,'files')
 			
-			println(text)
+//			println(text)
 				
 		}
 		
@@ -171,21 +165,23 @@ for (book in testFiles) {
 			
 			WebUI.click(findTestObject('option_File_Parmed', [('file') : file]))
 			
+			//questions and answers are really GLQuote and OccurrenceNote in tN files
+			
 			(questions, answers) = getDivValues(fileTQsPath)
 			
-			println(questions)
+//			println(questions)
 			
-			println(answers)
+//			println(answers)
 			
-			println(chapter)
+//			println(chapter)
 			
 			chpt = chapter as Integer
 
-			println(chpt)
+//			println(chpt)
 			
 			verse = file.replace('.md','') as Integer
 			
-			println(verse)
+//			println(verse)
 			
 			ref = chpt + ':' + verse
 						
@@ -203,31 +199,38 @@ for (book in testFiles) {
 				}
 			}
 			
-//			mdRows.each { row ->
-//				println(row)
-//			}
+			if (!errorsOnly) {
+				println('\n========= mdRows')
+				mdRows.each { row ->
+					println(row)
+				}
+				println('\n========= tRowText')
+				tRowText.each { row ->
+					println(row)
+				}
+			}
 			
 			r = 0
-			tRowText.each { row ->
-				println(row)
-			}
-			for (row in mdRows) {		
-//			mdRows.each { row ->
-				println('markdown row:' + row)
-//				println(tRowText[r])
+			
+//			for (row in mdRows) {		
+			mdRows.each { row ->
+				if (!errorsOnly) {
+					println('markdown row ' + r + ' [' + row + ']')
+					println(tRowText[r])
+				}
 				if (!tRowText.contains(row) && !tRowText2.contains(row)) {
 					msg = 'ERROR: ' + book + ' row [' + row + '] was not found in the app'
 					println(msg)
-					GlobalVariable.output.add(msg)
+					GlobalVariable.tcMessages.add(msg)
 					oFile.append(msg + '\n')
 					errFlag = true
 					bookError = true
-					return false
+//					return false
 				} else {
 					if (!errorsOnly) {
 						msg = 'row [' + row + '] was found in the app'
 						println(msg)
-						GlobalVariable.output.add(msg)
+						GlobalVariable.tcMessages.add(msg)
 						oFile.append(msg + '\n')
 					}
 				}
@@ -238,7 +241,7 @@ for (book in testFiles) {
 				if (!errorsOnly) {
 					msg = 'No missing rows in ' + book + ' ' + ref
 					println(msg)
-					GlobalVariable.output.add(msg)
+					GlobalVariable.tcMessages.add(msg)
 					oFile.append(msg + '\n')
 				}
 			}
@@ -254,7 +257,7 @@ for (book in testFiles) {
 	if (!bookErrors) {
 		msg = '   No missing rows in ' + book
 		println(msg)
-		GlobalVariable.output.add(msg)
+		GlobalVariable.tcMessages.add(msg)
 		oFile.append(msg + '\n')
 	}
 	
@@ -280,10 +283,12 @@ for (book in testFiles) {
 }
 
 println('\n\n')
-GlobalVariable.output.each { line ->
+GlobalVariable.tcMessages.each { line ->
 	println(line)
 }
 println('\n\n')
+
+GlobalVariable.scriptRunning = false
 
 WebUI.closeBrowser()
 
@@ -293,23 +298,36 @@ def getTableValues(xPath, type) {
 	List<WebElement> rows = Table.findElements(By.tagName('tr'))
 	int rows_count = rows.size()
 	def text = []
+	def rFields = []
 	for (int row = 0; row < rows_count; row++) {
 			if (type == 'rows') {
 			rowtext = rows.get(row).getText()
+			rowtext = rowtext.replace('\n',' ')
 			text.add(rowtext)
+			println(rowtext)
 		} else if (type == 'columns') {
 			List<WebElement> columns = rows.get(row).findElements(By.tagName('td'))
 			celltext = columns.get(0).getText()	
 			text.add(celltext)
 		} else if (type == 'files') {
-			List<WebElement> columns = rows.get(row).findElements(By.tagName('td'))
-			celltext = columns.get(0).getText()
+			rowtext = rows.get(row).getText()
+			rowtext = rowtext.replace('\n',' ')
+			println('files row = [' + rowtext + ']')
+			rFields = rowtext.split(' ')
+			celltext = rFields[0]
+//			List<WebElement> columns = rows.get(row).findElements(By.tagName('td'))
+//			celltext = columns.get(0).getText()
 			if (celltext.contains('.md')) {
 				text.add(celltext)
 			}
 		} else if (type == 'chapters') {
-			List<WebElement> columns = rows.get(row).findElements(By.tagName('td'))
-			celltext = columns.get(0).getText()
+			rowtext = rows.get(row).getText()
+			rowtext = rowtext.replace('\n',' ')
+			println('chapters row = [' + rowtext + ']')
+			rFields = rowtext.split(' ')
+			celltext = rFields[0]
+//			List<WebElement> columns = rows.get(row).findElements(By.tagName('td'))
+//			celltext = columns.get(0).getText()
 			if (!celltext.contains('..')) {
 				text.add(celltext)
 			}

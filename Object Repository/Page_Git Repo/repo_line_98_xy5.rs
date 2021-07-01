@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>repo_line_98_xy5</name>
+   <tag></tag>
+   <elementGuidId>69584152-ebb9-4a2c-bf59-8cf3c7669e2c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>li.L98.bottom-line.active</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//li[98]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>li</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>L98 bottom-line active</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>rel</name>
+      <type>Main</type>
+      <value>L98</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>TIT	2	9	xyz5	figs-ellipsis	δούλους ἰδίοις δεσπόταις ὑποτάσσεσθαι	1	Slaves are to be subject to their mastersThe Greek does not have **are**, but only **slaves to be subject to their masters**. We need to apply the verbal idea from verse 6 to here, which is **urge** or **exhort**. Alternate translation: “Exhort slaves to be subject to their masters” (See: [[rc://en/ta/man/translate/figs-ellipsis]])</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;theme-&quot;]/body[1]/div[@class=&quot;full height&quot;]/div[@class=&quot;repository file list blame&quot;]/div[@class=&quot;ui container fluid padded&quot;]/div[@class=&quot;tab-size-8 non-diff-file-content&quot;]/div[@class=&quot;ui attached table unstackable segment&quot;]/div[@class=&quot;file-view code-view&quot;]/table[1]/tbody[1]/tr[1]/td[@class=&quot;lines-code&quot;]/pre[1]/code[@class=&quot;chroma&quot;]/ol[@class=&quot;linenums&quot;]/li[@class=&quot;L98 bottom-line active&quot;]</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[98]</value>
+   </webElementXpaths>
+</WebElementEntity>

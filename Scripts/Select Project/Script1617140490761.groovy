@@ -24,5 +24,5 @@ WebUI.click(findTestObject('repoOption_Parmed', [('repo') : repo]))
 
 WebUI.click(findTestObject('resourceOption_Parmed', [('book') : book]))
 
-WebUI.waitForElementPresent(findTestObject('checkbox_All'), 240)
+WebUI.waitForElementPresent(findTestObject('input_All'), 600)
 

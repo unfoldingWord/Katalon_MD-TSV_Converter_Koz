@@ -20,9 +20,9 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://tn-converter-app.netlify.app/')
 
-WebUI.setText(findTestObject('input_Username_username'), 'tc01')
+WebUI.setText(findTestObject('input_Username'), 'tc01')
 
-WebUI.setEncryptedText(findTestObject('input_Password_password'), '+0+nfRaS+QU=')
+WebUI.setEncryptedText(findTestObject('input_Password'), '+0+nfRaS+QU=')
 
 WebUI.click(findTestObject('button_Login'))
 
@@ -32,4 +32,4 @@ WebUI.click(findTestObject('repoOption_manny_colonen_tq'))
 
 WebUI.click(findTestObject('resourceOption_Parmed', [('book') : '3jn']))
 
-WebUI.waitForElementPresent(findTestObject('checkbox_All'), 60)
+WebUI.waitForElementPresent(findTestObject('input_All'), 60)

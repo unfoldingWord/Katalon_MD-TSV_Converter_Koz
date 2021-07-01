@@ -1,0 +1,88 @@
+ Volume in drive C is OS
+ Volume Serial Number is 1841-2B85
+
+ Directory of C:\Users\cckoz\Katalon Studio\tC Create Project\Object Repository\Page_tCC translationNotes
+
+09/11/2020  02:38 PM    <DIR>          .
+09/11/2020  02:38 PM    <DIR>          ..
+09/10/2020  09:34 AM               203 .meta
+09/10/2020  09:34 AM             3,841 btnX_CloseColumns.rs
+09/10/2020  09:34 AM             4,152 button_SaveEnabled.rs
+09/10/2020  09:34 AM             4,930 button_ViewColumns.rs
+09/10/2020  09:34 AM             2,888 columns_Book.rs
+09/10/2020  09:34 AM             2,900 columns_Chapter.rs
+09/10/2020  09:34 AM             2,900 columns_GLQuote.rs
+09/10/2020  09:34 AM             2,880 columns_ID.rs
+09/10/2020  09:34 AM             2,912 columns_Occurrence.rs
+09/10/2020  09:34 AM             3,032 columns_OccurrenceNote.rs
+09/10/2020  09:34 AM             2,992 columns_OrigQuote.rs
+09/10/2020  09:34 AM             2,933 columns_RowHeader.rs
+09/10/2020  09:34 AM             3,039 columns_SupportReference.rs
+09/10/2020  09:34 AM             2,892 columns_Verse.rs
+09/10/2020  09:34 AM             2,524 h1_Login.rs
+09/10/2020  09:34 AM             3,750 label_Book.rs
+09/10/2020  09:34 AM             3,765 label_Chapter.rs
+09/10/2020  09:34 AM             3,763 label_GLQuote.rs
+09/10/2020  09:34 AM             3,740 label_ID.rs
+09/10/2020  09:34 AM             3,734 label_IDX.rs
+09/10/2020  09:34 AM             3,780 label_Occurrence.rs
+09/10/2020  09:34 AM             3,813 label_OccurrenceNote.rs
+09/10/2020  09:34 AM             3,771 label_OrigQuote.rs
+09/10/2020  09:34 AM             3,799 label_SupportReference.rs
+09/10/2020  09:34 AM             3,755 label_Verse.rs
+09/11/2020  02:38 PM                 0 names.txt
+09/10/2020  09:34 AM             3,587 p_.rs
+09/10/2020  09:34 AM             3,199 span_.rs
+09/10/2020  09:34 AM             3,753 span_OrigLangGod.rs
+09/10/2020  09:34 AM             3,455 span_OrigLangGodliness.rs
+09/10/2020  09:34 AM             3,465 span_OrigLangServant.rs
+09/10/2020  09:34 AM             3,417 text_Book_TIT.rs
+09/10/2020  09:34 AM             3,539 text_Chapter_1.rs
+09/10/2020  09:34 AM             3,438 text_Chapter_front.rs
+09/10/2020  09:34 AM             3,574 text_GLQuote_for the faith.rs
+09/10/2020  09:34 AM             3,563 text_GLQuote_knowledge.rs
+09/10/2020  09:34 AM             3,522 text_ID_c7me.rs
+09/10/2020  09:34 AM             3,410 text_ID_m2jl.rs
+09/10/2020  09:34 AM             3,805 text_OccurrenceNote_This includes Paul.rs
+09/10/2020  09:34 AM             4,230 text_OccurrenceNote_Who wrote the Book of Titus.rs
+09/10/2020  09:34 AM             3,441 text_Occurrence_0.rs
+09/10/2020  09:34 AM             3,553 text_Occurrence_1.rs
+09/10/2020  09:34 AM             4,355 text_OrigLangQuote.rs
+09/11/2020  02:20 PM             3,612 text_OrigQuote-en-xyz8-alitheas-1.rs
+09/11/2020  02:20 PM             3,607 text_OrigQuote-en-xyz8-apstolos-1.rs
+09/11/2020  02:20 PM             3,601 text_OrigQuote-en-xyz8-Christo-1.rs
+09/11/2020  02:20 PM             3,602 text_OrigQuote-en-xyz8-d-1.rs
+09/11/2020  02:21 PM             3,306 text_OrigQuote-en-xyz8-dolos-1.rs
+09/11/2020  02:20 PM             3,555 text_OrigQuote-en-xyz8-efsveian-1.rs
+09/11/2020  02:20 PM             3,607 text_OrigQuote-en-xyz8-eklektn-1.rs
+09/11/2020  02:20 PM             3,612 text_OrigQuote-en-xyz8-epgnosin-1.rs
+09/11/2020  02:20 PM             3,605 text_OrigQuote-en-xyz8-Iiso-1.rs
+09/11/2020  02:20 PM             3,617 text_OrigQuote-en-xyz8-ka-1.rs
+09/11/2020  02:20 PM             3,305 text_OrigQuote-en-xyz8-ka-2.rs
+09/11/2020  02:20 PM             3,610 text_OrigQuote-en-xyz8-kat-1.rs
+09/11/2020  02:20 PM             3,007 text_OrigQuote-en-xyz8-Pavlos-1.rs
+09/11/2020  02:20 PM             3,609 text_OrigQuote-en-xyz8-pstin-1.rs
+09/11/2020  02:21 PM             3,604 text_OrigQuote-en-xyz8-Theo-1.rs
+09/11/2020  02:20 PM             3,614 text_OrigQuote-en-xyz8-Theo-2.rs
+09/11/2020  02:20 PM             3,618 text_OrigQuote-en-xyz8-ts-1.rs
+09/11/2020  02:24 PM             4,465 text_OrigQuote-GL-xyz8.rs
+09/10/2020  09:34 AM             3,584 text_OrigQuote1.rs
+09/10/2020  09:34 AM             3,589 text_OrigQuote2.rs
+09/10/2020  09:34 AM             3,758 text_OrigQuote_Greek.rs
+09/10/2020  09:34 AM             2,951 text_RowHeader_TIT 1intro.rs
+09/10/2020  09:34 AM             2,963 text_RowHeader_TIT frontintro.rs
+09/10/2020  09:34 AM             3,004 text_RowHeader_Titus 11.rs
+09/10/2020  09:34 AM             3,624 text_SupRef_figs-abstractnouns.rs
+09/10/2020  09:34 AM             3,634 text_SupRef_figs-activepassive.rs
+09/10/2020  09:34 AM             3,537 text_Verse_1.rs
+09/10/2020  09:34 AM             3,428 text_Verse_intro.rs
+09/10/2020  09:34 AM             3,747 tNText_enOutlinePoint1.rs
+09/10/2020  09:34 AM             3,742 tNText_enOutlinePoint2.rs
+09/10/2020  09:34 AM             3,770 tNText_enOutlinePoint3.rs
+09/10/2020  09:34 AM             4,211 tNText_enWhoWroteTheBook.rs
+09/10/2020  09:34 AM             3,510 tNText_GLOutlinePoint1.rs
+09/10/2020  09:34 AM             3,448 tNText_GLOutlinePoint2.rs
+09/10/2020  09:34 AM             3,452 tNText_GLOutlinePoint3.rs
+09/10/2020  09:34 AM             3,761 tNText_GLWhoWroteTheBook.rs
+              79 File(s)        272,263 bytes
+               2 Dir(s)  157,055,787,008 bytes free

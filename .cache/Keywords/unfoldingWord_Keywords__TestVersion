@@ -1,0 +1,30 @@
+{
+  "keywordFileContentHash": "2ECC093BABFBC840C9A68043A5862BEF",
+  "keywordClasses": [
+    {
+      "name": "unfoldingWord_Keywords.TestVersion",
+      "keywordMethods": [
+        {
+          "name": "isVersionGreater",
+          "parameters": [
+            {
+              "name": "testVersion",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Object",
+                "unresolvedClassName": "java.lang.Object",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>text_Full_Repo_Raw</name>
+   <tag></tag>
+   <elementGuidId>5c1ef9b4-3cb4-47fd-8308-bff2cf5ed532</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/pre</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>mtk1</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>`LUK    1   15  ie95        ἐκ κοιλίας μητρὸς αὐτοῦ 1   from his </value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;theme-gitea&quot;]/body[1]/div[@class=&quot;full height&quot;]/div[@class=&quot;page-content repository file editor edit&quot;]/div[@class=&quot;ui container&quot;]/form[@class=&quot;ui edit form dirty dirty-file&quot;]/div[@class=&quot;field&quot;]/div[@class=&quot;ui bottom attached active tab segment&quot;]/div[@class=&quot;monaco-editor-container&quot;]/div[@class=&quot;monaco-editor no-user-select mac  showUnused showDeprecated vs focused&quot;]/div[@class=&quot;overflow-guard&quot;]/div[@class=&quot;monaco-scrollable-element editor-scrollable vs mac&quot;]/div[@class=&quot;lines-content monaco-editor-background&quot;]/div[@class=&quot;view-lines monaco-mouse-cursor-text&quot;]/div[@class=&quot;view-line&quot;]/span[1]/span[@class=&quot;mtk1&quot;]</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='[[rc://en/ta/man/translate/figs-activepassive]])'])[1]/following::span[2]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='womb” or “even before he is born”'])[1]/preceding::span[2]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[13]/span/span</value>
+   </webElementXpaths>
+</WebElementEntity>

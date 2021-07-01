@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>repo_line_26_wja4</name>
+   <tag></tag>
+   <elementGuidId>425e90c6-beda-4998-ae4a-6f957b865b14</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>li.L26.bottom-line.active</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//li[26]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>li</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>L26 bottom-line active</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>rel</name>
+      <type>Main</type>
+      <value>L26</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>TIT	16	wja4			0	Connecting Statement:	Having told Titus to ordain elders in every city on the island of Crete, Paul then gives the requirements for elders.</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;theme-&quot;]/body[1]/div[@class=&quot;full height&quot;]/div[@class=&quot;repository file list blame&quot;]/div[@class=&quot;ui container fluid padded&quot;]/div[@class=&quot;tab-size-8 non-diff-file-content&quot;]/div[@class=&quot;ui attached table unstackable segment&quot;]/div[@class=&quot;file-view code-view&quot;]/table[1]/tbody[1]/tr[1]/td[@class=&quot;lines-code&quot;]/pre[1]/code[@class=&quot;chroma&quot;]/ol[@class=&quot;linenums&quot;]/li[@class=&quot;L26 bottom-line active&quot;]</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[26]</value>
+   </webElementXpaths>
+</WebElementEntity>

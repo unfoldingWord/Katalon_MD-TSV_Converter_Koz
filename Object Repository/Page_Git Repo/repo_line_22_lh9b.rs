@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>repo_line_22_lh9b</name>
+   <tag></tag>
+   <elementGuidId>49145c70-449a-4db8-828b-380132546a9d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>li.L22.bottom-line.active</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = 'TIT	1	5	lh9b	ἀπέλιπόν σε ἐν Κρήτῃ	1	I left you in Crete	“I told you to stay in Crete”' or . = 'TIT	1	5	lh9b	ἀπέλιπόν σε ἐν Κρήτῃ	1	I left you in Crete	“I told you to stay in Crete”')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//li[22]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>li</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>L22 bottom-line active</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>rel</name>
+      <type>Main</type>
+      <value>L22</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>TIT	1	5	lh9b	ἀπέλιπόν σε ἐν Κρήτῃ	1	I left you in Crete	“I told you to stay in Crete”</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;theme-&quot;]/body[1]/div[@class=&quot;full height&quot;]/div[@class=&quot;repository file list blame&quot;]/div[@class=&quot;ui container fluid padded&quot;]/div[@class=&quot;tab-size-8 non-diff-file-content&quot;]/div[@class=&quot;ui attached table unstackable segment&quot;]/div[@class=&quot;file-view code-view&quot;]/table[1]/tbody[1]/tr[1]/td[@class=&quot;lines-code&quot;]/pre[1]/code[@class=&quot;chroma&quot;]/ol[@class=&quot;linenums&quot;]/li[@class=&quot;L22 bottom-line active&quot;]</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[22]</value>
+   </webElementXpaths>
+</WebElementEntity>

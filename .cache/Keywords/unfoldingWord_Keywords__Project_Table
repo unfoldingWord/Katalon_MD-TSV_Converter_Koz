@@ -1,0 +1,30 @@
+{
+  "keywordFileContentHash": "BAC0C445A49F2B73D5089746D003F9E3",
+  "keywordClasses": [
+    {
+      "name": "unfoldingWord_Keywords.Project_Table",
+      "keywordMethods": [
+        {
+          "name": "getTableElements",
+          "parameters": [
+            {
+              "name": "xpath",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.Object",
+                "unresolvedClassName": "java.lang.Object",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": true,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\n\t * Refresh browser\n\t */"
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

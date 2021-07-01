@@ -23,14 +23,18 @@ import com.kms.katalon.core.webui.driver.DriverFactory
 import internal.GlobalVariable
 import groovy.time.*
 
+// 	TEST TO VERIFY THAT THE SOURCE AND TARGET VERSE REFERENCES MATCH ON ALL ROWS
 
-allBooks = '/Users/' + GlobalVariable.pcUser + '/Documents/Sikuli/Files/Bible_Books.csv'
-ntBooks = '/Users/' + GlobalVariable.pcUser + '/Documents/Sikuli/Files/NT_Books.csv'
-otBooks = '/Users/' + GlobalVariable.pcUser + '/Documents/Sikuli/Files/OT_Books.csv'
-someBooks = '/Users/' + GlobalVariable.pcUser + '/Documents/Sikuli/Files/Some_Books.csv'
-oneBook = '/Users/' + GlobalVariable.pcUser + '/Documents/Sikuli/Files/One_Book.csv'
+filesPath = '/Users/' + GlobalVariable.pcUser + '/Katalon Studio/Files/Reference/'
 
-myBooks = someBooks
+allBooks = filesPath + 'Bible_Books.csv'
+ntBooks = filesPath + 'NT_Books.csv'
+otBooks = filesPath + 'OT_Books.csv'
+someBooks = filesPath + 'Some_Books.csv'
+oneBook = filesPath + 'One_Book.csv'
+epistleBooks = filesPath + 'Epistle_Books.csv'
+
+myBooks = oneBook
 
 testFiles = []
 
@@ -52,7 +56,7 @@ targetPath = "/html/body/div[1]/div/div/div[2]/div[2]/div/div/div[2]/table/tbody
 
 repoOwner = 'manny_colon'
 
-langCode = 'ru'
+langCode = 'es-419'
 
 mdType = 'tn'
 
@@ -64,11 +68,11 @@ String fName = 'rows_alligned_' + mdType + '-' + now.format('MMddyyhhmmss') + '.
 
 File oFile = new File('/Users/' + GlobalVariable.pcUser + '/Katalon Studio/Files/' + fName)
 msg = 'Testing ' + repo
-GlobalVariable.output.add(msg)
+GlobalVariable.tcMessages.add(msg)
 oFile.append(msg + '\n')
 
 //Test book/chapter/verse only?
-bcvOnly = true
+referenceOnly = true
 
 space = ' '
 
@@ -82,9 +86,11 @@ for (book in testFiles) {
 	
 	WebUI.delay(3)
 
-	sRowText = getTableValues(sourcePath, 'source')
+	referenceType = WebUI.getText(findTestObject('Object Repository/label_Book_or_Reference'))
+
+	sRowText = getTableValues(sourcePath, 'source', referenceType)
 		
-	tRowText = getTableValues(targetPath, 'target')
+	tRowText = getTableValues(targetPath, 'target', referenceType)
 	
 	errFlag = false
 	
@@ -92,7 +98,7 @@ for (book in testFiles) {
 	
 	msg = 'Processing ' + book
 	println(msg)
-	GlobalVariable.output.add(msg)
+	GlobalVariable.tcMessages.add(msg)
 	oFile.append(msg + '\n')
 	
 	sRowText.each { it ->
@@ -100,7 +106,7 @@ for (book in testFiles) {
 		if(tRowText[n] != it) {
 			msg = book + ' mismatched row ' + row + '[' + sRowText[n] + '] [' + tRowText[n] + ']'
 			println(msg)
-			GlobalVariable.output.add(msg)
+			GlobalVariable.tcMessages.add(msg)
 			oFile.append(msg + '\n')
 			errFlag = true
 		}
@@ -110,7 +116,7 @@ for (book in testFiles) {
 	if (!errFlag) {
 		msg = 'No mismatched rows in ' + book
 		println(msg)
-		GlobalVariable.output.add(msg)
+		GlobalVariable.tcMessages.add(msg)
 		oFile.append(msg + '\n')
 	}
 	
@@ -128,43 +134,41 @@ for (book in testFiles) {
 }
 
 println('\n\n')
-GlobalVariable.output.each { line ->
+GlobalVariable.tcMessages.each { line ->
 	println(line)
 }
 println('\n\n')
 
+GlobalVariable.scriptRunning = false
+
 WebUI.closeBrowser()
 
-def getTableValues(xPath, type) {
+def getTableValues(xPath, type, refType) {
 	WebDriver driver = DriverFactory.getWebDriver()
 	WebElement Table = driver.findElement(By.xpath(xPath))
 	List<WebElement> rows = Table.findElements(By.tagName('tr'))
 	int rows_count = rows.size()
+	String [] rFields
 	def text = []
 	
 	for (int row = 0; row < rows_count; row++) {
 		rowtext = rows.get(row).getText()
-//		println(rowtext)
-		if (bcvOnly) {
-			spc1 = rowtext.indexOf(space)
-//			println(spc1)
-			spc2 = rowtext.indexOf(space, spc1+1)
-//			println(spc2)
-			spc3 = rowtext.indexOf(space, spc2+1)
-//			println(spc3)
-			if (type == 'source') {
-				if (spc3 < 0) {
-					spc3 = rowtext.length()
-				}
-				rowtext = rowtext.substring(spc1+1,spc3)
+		if (type == 'source') {
+			rFields = rowtext.split(' ')
+			if (refType == 'Reference') {
+				text.add(rFields[0])
 			} else {
-				if (spc2 < 0) {
-					spc2 = rowtext.length()
-				}
-				rowtext = rowtext.substring(0,spc2)
+				text.add(rFields[1] + ':' + rFields[2])
+			}
+		} else { 
+			rFields = rowtext.split('\n')
+			if (refType == 'Reference') {
+				text.add(rFields[0])
+			} else {
+				rFields = rFields[0].split(' ')
+				text.add(rFields[0] + ':' + rFields[1])
 			}
 		}
-		text.add(rowtext)
 	}
 	return text
 }

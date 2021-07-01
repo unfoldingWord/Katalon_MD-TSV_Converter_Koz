@@ -15,33 +15,25 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Login'), [:])
+url = 'https://develop--tc-create-app.netlify.app/'
 
-mdType = 'tn'
+WebUI.callTestCase(findTestCase('Login'), [('url') : url])
 
-owner = 'manny_colon'
+WebUI.click(findTestObject('Page_tC Create/listOrg_translate_test'))
 
-repo_en = owner + '/en_' + mdType
+WebUI.click(findTestObject('Page_tC Create/resource_Parmed', [('resource') : 'unfoldingWord/en_tn']))
 
-repo_es = owner + '/es-419_' + mdType
+WebUI.click(findTestObject('Page_tC Create/combo_Select Language'))
 
-repo = repo_es
+WebUI.click(findTestObject('Page_tC Create/listOption_Language_Parmed', [('lang_code') : 'es-419']))
 
-book = '1jn'
+WebUI.click(findTestObject('/Page_tC Create/resource_Parmed', [('resource') : 'en_tn_65-3JN.tsv']))
 
+WebUI.waitForElementClickable(findTestObject('Object Repository/Page_tCC translationNotes/buttonX_link_to_resources'),10)
 
-WebUI.callTestCase(findTestCase('Select Project'), [('owner') : owner, ('repo') : repo, ('book') : book])
+WebUI.click(findTestObject('Object Repository/Page_tCC translationNotes/buttonX_link_to_resources'))
 
-WebUI.scrollToPosition(0, 0)
+WebUI.click(findTestObject('Page_tC Create/resource_Parmed', [('resource') : 'unfoldingWord/en_tn']))
 
-WebUI.delay(1)
-	
-referenceType = WebUI.getText(findTestObject('Object Repository/label_Book_or_Reference'))
+WebUI.click(findTestObject('/Page_tC Create/resource_Parmed', [('resource') : 'en_tn_65-3JN.tsv']))
 
-println('ref=[' + referenceType + ']')
-
-if (referenceType == 'Reference') {
-	println('ref')
-} else if (referenceType == 'Book') {
-	println('Book')
-}
